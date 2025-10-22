@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">My Website</div>
+            <nav>
+                <img src="C:\Users\SALMA SALSABILA\Downloads\Logo-RevoU-5.png"/>
+                <a href="index.html">Home</a>
+                <a href="profile.html">Our Profile</a>
+                <a href="http://127.0.0.1:3000/index.html?serverWindowId=b71b32b5-7f92-4d18-b039-1323313e838f">
+
+                </a>
+                <a href="#">Portofolio</a>
+                <a href="#message-us-section">Message Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="welcome-section" class="section">
+            <h1 id="welcome-message">Hi, Welcome To Website</h1>
+            <p>di website latihan pertama</p>
+            <div class="banner">
+                <p>1366x576 Banner Area</p>
+            </div>
+        </section>
+
+        <section id="headquarter-section" class="section">
+            <h2>Our Headquarter</h2>
+            <div class="headquarter-list">
+                <div class="hq-item">
+                    <div class="hq-circle"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="hq-item">
+                    <div class="hq-circle"></div>
+                    <p>Bandung</p>
+                </div>
+                <div class="hq-item">
+                    <div class="hq-circle"></div>
+                    <p>Surabaya</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="message-us-section" class="section form-section">
+            <h2>Message Us</h2>
+            <div class="form-content">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">Tanggal Lahir:</label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan">
+                            <label for="female">Perempuan</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div class="form-output">
+                    <h3>Current Output:</h3>
+                    <p>Current Date: <span id="current-date"></span></p>
+                    <div id="output-data">
+                        Data belum di-submit.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by salma Salsabila</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
