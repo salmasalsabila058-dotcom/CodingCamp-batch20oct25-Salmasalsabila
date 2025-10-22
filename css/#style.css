@@ -1,0 +1,258 @@
+/* Struktur File: css/style.css */
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Navbar */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Section Styling */
+.section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Welcome Section & Banner */
+#welcome-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+#welcome-section p {
+    margin-bottom: 20px;
+}
+
+.banner {
+    background-color: #ff9393;
+    height: 300px; /* Diperkecil agar lebih responsif di mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #666;
+    border: 1px solid #5c2424;
+}
+
+/* --- Styling untuk Headquarter Section --- */
+
+#headquarter-section h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-left: 20px; /* Sesuai mockup, judul agak ke kiri */
+}
+
+.headquarter-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.hq-item {
+    text-align: center;
+    /* Memberi flex-basis untuk memastikan lebar yang merata di desktop */
+    flex-basis: 30%; 
+}
+
+.hq-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Border tipis seperti di mockup */
+    border: 1px solid #333; 
+    margin: 0 auto 10px auto;
+    /* Pastikan konten di dalamnya (jika ada) berada di tengah */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.hq-item p {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* --- Tambahan Responsif di Media Query yang sudah ada --- */
+
+@media (max-width: 768px) {
+    
+    /* ... kode responsif header dan navbar yang sudah ada ... */
+
+    .headquarter-list {
+        flex-direction: column; /* Tumpuk ke bawah di mobile */
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .hq-item {
+        margin-bottom: 30px;
+        flex-basis: 100%; /* Lebar penuh */
+    }
+    
+    .hq-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Form Section */
+.form-content {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+/* Form Styling */
+#message-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Form Output Styling (Kolom Kanan) */
+.form-output {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-output h3 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+/* Responsif untuk Mobile (Max-width 768px) */
+@media (max-width: 768px) {
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .headquarter-list {
+        flex-direction: column; /* Tumpuk ke bawah di mobile */
+        align-items: center;
+    }
+    
+    .hq-item {
+        margin-bottom: 20px;
+    }
+
+    .form-content {
+        flex-direction: column; /* Tumpuk form dan output */
+        padding: 0 20px;
+    }
+    
+    .form-output {
+        margin-top: 20px;
+    }
+}
